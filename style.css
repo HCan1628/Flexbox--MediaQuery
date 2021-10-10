@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container__nav{
+    display: flex;
+    justify-content: end;
+    background-color: rgb(105, 105, 105,0.7);
+   height: 50px;
+    
+}
+.container__nav--bolum{
+    
+    width: 400px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.container__nav--bolum a{
+    text-decoration: none;
+    color: white;
+}
+span{
+    visibility: hidden;
+}
+.container__main{
+    width: 80%;
+    height: 150px;
+    border: 18px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 30px;
+    background-color: #00900B;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    body{
+        background-color: #BAC16B;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    body{
+        background-color: #FF8300;
+    }
+    .container__nav--bolum{
+        width: 100%;
+    }
+    .container__nav--bolum a{
+        color: black;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    body{
+        background-color: #A700E1;
+    }
+    .container__nav{
+        background-color: #00FFFF;
+        height: 150px;
+    }
+    .container__nav--bolum{
+        flex-direction: column;
+        
+        height: 100%;
+    }
+    .container__nav--bolum a{
+        color: black;
+    }
+    .container__main{
+        background-color:#A700E1 ;
+        font-size: 25px;
+        border: 18px solid #FF0000;
+        width: 60%;
+        font-weight: initial;
+        margin-top: 150px;
+    }
+    .container__main p{
+        display: none;
+    }
+    span{
+        visibility: hidden;
+        position: relative;
+    }
+    span::after{
+        visibility: visible;
+        position: absolute;
+       font-size: 20px;
+        width: 350px;
+        left: -135px;
+        content: "Did you realize,you made amagic!";
+    }
+  }
